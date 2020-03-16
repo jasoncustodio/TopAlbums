@@ -31,6 +31,7 @@ class AlbumDetailViewController: UIViewController {
         addSubViews()
         setupImageView()
         setupLabels()
+        setupButton()
     }
     
     func addSubViews() {
@@ -67,6 +68,36 @@ class AlbumDetailViewController: UIViewController {
         
         copyright.text = "Copyright: \(album?.copyright ?? "?")"
         copyright.constraintLabel(to: releaseDate, on: view)
+    }
+    
+    func setupButton() {
+        button.backgroundColor = .darkGray
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("PRESS ME PLEASE", for: .normal)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+        button.centerMePlease(on: view)
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
+    }
+    
+    @objc func buttonTapped() {
+        guard let url = album?.url else {
+            return
+        }
+        
+        let itunes = SFSafariViewController(url: url)
+        itunes.delegate = self
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(itunes, animated: true)
+    }
+}
+
+extension AlbumDetailViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        navigationController?.popViewController(animated: true)
+        navigationController?.isNavigationBarHidden = false
     }
 }
 
