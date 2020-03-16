@@ -6,21 +6,19 @@
 //  Copyright © 2020 Jason Maxwell Custodio. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import SafariServices
 
-class AlbumDetailViewController: UIViewController {
+final class AlbumDetailViewController: UIViewController {
     
-    var albumArtwork = UIImageView()
-    var name = UILabel()
-    var artistName = UILabel()
-    var genres = UILabel()
-    var releaseDate = UILabel()
-    var copyright = UILabel()
+    private var albumArtwork = UIImageView()
+    private var name = UILabel()
+    private var artistName = UILabel()
+    private var genres = UILabel()
+    private var releaseDate = UILabel()
+    private var copyright = UILabel()
     
-    var button = UIButton()
+    private var button = UIButton()
     
     var album: Album?
     
@@ -34,7 +32,7 @@ class AlbumDetailViewController: UIViewController {
         setupButton()
     }
     
-    func addSubViews() {
+    private func addSubViews() {
         view.addSubview(albumArtwork)
         view.addSubview(artistName)
         view.addSubview(name)
@@ -44,7 +42,7 @@ class AlbumDetailViewController: UIViewController {
         view.addSubview(button)
     }
     
-    func setupImageView() {
+    private func setupImageView() {
         albumArtwork.image = album?.artwork
         
         albumArtwork.centerMePlease(on: view)
@@ -53,7 +51,7 @@ class AlbumDetailViewController: UIViewController {
         albumArtwork.widthAnchor.constraint(equalTo: albumArtwork.heightAnchor).isActive = true
     }
     
-    func setupLabels() {
+    private func setupLabels() {
         name.text = "Album Name: \(album?.name ?? "?")"
         name.constraintLabel(to: albumArtwork, on: view)
         
@@ -70,7 +68,7 @@ class AlbumDetailViewController: UIViewController {
         copyright.constraintLabel(to: releaseDate, on: view)
     }
     
-    func setupButton() {
+    private func setupButton() {
         button.backgroundColor = .darkGray
         button.setTitleColor(.white, for: .normal)
         button.setTitle("PRESS ME PLEASE", for: .normal)
@@ -82,7 +80,7 @@ class AlbumDetailViewController: UIViewController {
         button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
     }
     
-    @objc func buttonTapped() {
+    @objc private func buttonTapped() {
         guard let url = album?.url else {
             return
         }

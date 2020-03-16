@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AlbumTableViewController: UIViewController {
+final class AlbumTableViewController: UIViewController {
     
-    var albumList: [Album] = []
-    var tableView = UITableView()
+    private var albumList: [Album] = []
+    private var tableView = UITableView()
     private let cellIdentifier = "cell"
     private var isRefreshing = true
     

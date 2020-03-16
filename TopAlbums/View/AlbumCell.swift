@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumCell: UITableViewCell {
+final class AlbumCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
     }

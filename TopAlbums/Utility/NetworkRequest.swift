@@ -8,9 +8,9 @@
 
 import Foundation
 
-class NetworkRequest {
-    let session = URLSession(configuration: .ephemeral, delegate: nil, delegateQueue: .main)
-    let url: URL
+final class NetworkRequest {
+    private let session = URLSession(configuration: .ephemeral, delegate: nil, delegateQueue: .main)
+    private let url: URL
     
     init(url: URL) {
         self.url = url
