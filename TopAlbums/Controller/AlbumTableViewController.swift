@@ -53,6 +53,12 @@ extension AlbumTableViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailScreen = AlbumDetailViewController()
+        detailScreen.album = albumList[indexPath.row]
+        navigationController?.pushViewController(detailScreen, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         var album = albumList[indexPath.row]
         

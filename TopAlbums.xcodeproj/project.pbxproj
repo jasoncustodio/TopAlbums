@@ -16,6 +16,7 @@
 		80988DDE241F271000FD3E17 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80988DDD241F271000FD3E17 /* AlbumCell.swift */; };
 		80988DE1241F277000FD3E17 /* UIView+TopAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80988DE0241F277000FD3E17 /* UIView+TopAlbums.swift */; };
 		80988DE3241F279B00FD3E17 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80988DE2241F279B00FD3E17 /* NetworkRequest.swift */; };
+		80988DE5241F295C00FD3E17 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80988DE4241F295C00FD3E17 /* AlbumDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		80988DDD241F271000FD3E17 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		80988DE0241F277000FD3E17 /* UIView+TopAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TopAlbums.swift"; sourceTree = "<group>"; };
 		80988DE2241F279B00FD3E17 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		80988DE4241F295C00FD3E17 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				80988DDA241F26D100FD3E17 /* AlbumTableViewController.swift */,
+				80988DE4241F295C00FD3E17 /* AlbumDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				80988DC3241F21ED00FD3E17 /* AppDelegate.swift in Sources */,
 				80988DDB241F26D100FD3E17 /* AlbumTableViewController.swift in Sources */,
 				80988DC5241F21ED00FD3E17 /* SceneDelegate.swift in Sources */,
+				80988DE5241F295C00FD3E17 /* AlbumDetailViewController.swift in Sources */,
 				80988DD8241F25FD00FD3E17 /* Album.swift in Sources */,
 				80988DDE241F271000FD3E17 /* AlbumCell.swift in Sources */,
 			);
