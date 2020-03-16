@@ -17,6 +17,7 @@ class AlbumTableViewController: UIViewController {
     
     override func viewDidLoad() {
         title = "Top 10 Albums"
+        setupRefreshControl()
         fetchRSS()
         setupTableView()
     }
@@ -29,6 +30,12 @@ class AlbumTableViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.register(AlbumCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.pin(to: view)
+    }
+    
+    private func setupRefreshControl() {
+        let refresh = UIRefreshControl()
+        tableView.refreshControl = refresh
+        tableView.refreshControl?.beginRefreshing()
     }
 }
 
@@ -71,6 +78,10 @@ private extension AlbumTableViewController {
         let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/10/explicit.json")!
         let request = NetworkRequest(url: url)
         request.execute() { [weak self] (data) in
+            self?.isRefreshing = false
+            self?.tableView.reloadData()
+            self?.tableView.refreshControl?.endRefreshing()
+            self?.tableView.refreshControl?.removeFromSuperview()
             if let data = data {
                 self?.decode(data)
             }
