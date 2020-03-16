@@ -64,15 +64,11 @@
 		80988DC1241F21ED00FD3E17 /* TopAlbums */ = {
 			isa = PBXGroup;
 			children = (
-				80988DDF241F274E00FD3E17 /* Utility */,
-				80988DC2241F21ED00FD3E17 /* AppDelegate.swift */,
-				80988DC4241F21ED00FD3E17 /* SceneDelegate.swift */,
-				80988DDC241F26F600FD3E17 /* View */,
 				80988DD6241F25D500FD3E17 /* Model */,
-				80988DCB241F21EE00FD3E17 /* Assets.xcassets */,
+				80988DDC241F26F600FD3E17 /* View */,
 				80988DD9241F26A100FD3E17 /* Controller */,
-				80988DCD241F21EE00FD3E17 /* LaunchScreen.storyboard */,
-				80988DD0241F21EE00FD3E17 /* Info.plist */,
+				80988DDF241F274E00FD3E17 /* Utility */,
+				80988DE6241F29F000FD3E17 /* Support */,
 			);
 			path = TopAlbums;
 			sourceTree = "<group>";
@@ -109,6 +105,18 @@
 				80988DE2241F279B00FD3E17 /* NetworkRequest.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		80988DE6241F29F000FD3E17 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				80988DCD241F21EE00FD3E17 /* LaunchScreen.storyboard */,
+				80988DC4241F21ED00FD3E17 /* SceneDelegate.swift */,
+				80988DC2241F21ED00FD3E17 /* AppDelegate.swift */,
+				80988DCB241F21EE00FD3E17 /* Assets.xcassets */,
+				80988DD0241F21EE00FD3E17 /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XLM2PPXBF;
-				INFOPLIST_FILE = TopAlbums/Info.plist;
+				INFOPLIST_FILE = TopAlbums/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XLM2PPXBF;
-				INFOPLIST_FILE = TopAlbums/Info.plist;
+				INFOPLIST_FILE = TopAlbums/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
