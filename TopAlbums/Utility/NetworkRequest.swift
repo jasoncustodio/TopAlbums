@@ -18,6 +18,11 @@ final class NetworkRequest {
     
     func execute(withCompletion completion: @escaping (Data?) -> Void) {
         let task = session.dataTask(with: url) { data, response, error in
+            if let e = error {
+                print(e)
+                return
+            }
+            
             completion(data)
         }
         task.resume()
