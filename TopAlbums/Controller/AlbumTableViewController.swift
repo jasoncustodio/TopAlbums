@@ -81,7 +81,7 @@ extension AlbumTableViewController: UITableViewDelegate, UITableViewDataSource {
 
 private extension AlbumTableViewController {
     func fetchRSS() {
-        let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/10/explicit.json")!
+        let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/100/explicit.json")!
         let request = NetworkRequest(url: url)
         request.execute() { [weak self] (data) in
             self?.isRefreshing = false

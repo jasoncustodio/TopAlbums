@@ -9,7 +9,7 @@
 import Foundation
 
 final class NetworkRequest {
-    private let session = URLSession(configuration: .ephemeral, delegate: nil, delegateQueue: .main)
+    private let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
     private let url: URL
     
     init(url: URL) {
