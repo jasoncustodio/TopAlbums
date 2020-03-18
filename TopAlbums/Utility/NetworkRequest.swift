@@ -17,9 +17,9 @@ final class NetworkRequest {
     }
     
     func execute(withCompletion completion: @escaping (Data?) -> Void) {
-        let task = session.dataTask(with: url, completionHandler: { (data: Data?, _, _) -> Void in
+        let task = session.dataTask(with: url) { data, response, error in
             completion(data)
-        })
+        }
         task.resume()
     }
 }
